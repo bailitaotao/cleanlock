@@ -85,13 +85,14 @@
 					};
 				};
 			};
-			buildConfigurationList = 22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "Cleanlock" */;
-			developmentRegion = "zh-Hans";
+			buildConfigurationList = 22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "cleanlock" */;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
 				"zh-Hans",
 				en,
+				ja,
+				Base,
 			);
 			mainGroup = 22B9F4C22F66812B00755E94;
 			minimizedProjectReferenceProxies = 1;
@@ -186,6 +187,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -243,6 +245,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -270,7 +273,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailitaotao.cleanlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -308,7 +311,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailitaotao.cleanlock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -325,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "Cleanlock" */ = {
+		22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "cleanlock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9F4D42F66812C00755E94 /* Debug */,

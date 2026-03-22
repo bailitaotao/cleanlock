@@ -17,11 +17,11 @@ struct ContentView: View {
                 .foregroundColor(.secondary)
             
             VStack(spacing: 8) {
-                Text("屏幕清洁模式")
+                Text(.homeTitle)
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                Text("开启后屏幕将变黑并屏蔽键盘按键\n方便你清洁屏幕与键盘")
+                Text(.homeSubtitle)
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .foregroundColor(.secondary)
@@ -30,12 +30,13 @@ struct ContentView: View {
             Button(action: {
                 cleaningController.startCleaning()
             }) {
-                Text("开启清洁")
-                    .fontWeight(.medium)
+                Text(.homeStartCleaning)
+                    .font(.title3)
+                    .fontWeight(.semibold)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 6)
             }
-            .controlSize(.large)
+            .controlSize(.regular)
             .buttonStyle(.glassProminent)
             .buttonBorderShape(.capsule)
             .disabled(cleaningController.isCleaning)
@@ -47,6 +48,18 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview("English") {
     ContentView(cleaningController: ScreenCleaningController())
+        .environment(\.locale, Locale(identifier: "en"))
 }
+
+#Preview("简体中文") {
+    ContentView(cleaningController: ScreenCleaningController())
+        .environment(\.locale, Locale(identifier: "zh-Hans"))
+}
+
+#Preview("日本語") {
+    ContentView(cleaningController: ScreenCleaningController())
+        .environment(\.locale, Locale(identifier: "ja"))
+}
+

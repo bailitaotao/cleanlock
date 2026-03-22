@@ -1,40 +1,48 @@
+<div align="center">
+  <img src="./assets/icon.svg" alt="Cleanlock icon" width="64">
+
 # Cleanlock
 
-<p align="center">
-  <img src="cleanlock.svg" alt="Cleanlock icon" width="64">
-</p>
+**A minimal macOS cleaning utility**
 
-<p align="center">
-一个极简的 macOS 屏幕清洁小工具
-<p align="center">
-开启后，Cleanlock 会进入全屏黑幕，并临时拦截键盘输入，方便你擦拭 MacBook 屏幕和键盘
-</p>
+Cleanlock turns your screen black and temporarily blocks keyboard input so you can wipe your MacBook screen and keyboard without accidental key presses.
 
-## 系统要求
+[**English**] | [**简体中文**](./docs/zh-CN/README.md) | [**日本語**](./docs/ja/README.md)
 
-macOS Tahoe 26.0 及更高版本
+---
 
-我爱大玻璃 d(^_^o)
+</div>
 
-## 下载
+## Interface
 
-前往 [Releases](https://github.com/bailitaotao/cleanlock/releases) 页面下载最新版本
+![Interface](./assets/interface.png)
 
-也打包好了最低支持 macOS 12 的安装包，只是不会再做更新维护，体验也会差一些 [Cleanlock.1.1.0-legacy.dmg](https://github.com/bailitaotao/cleanlock/releases/download/v1.1.0/Cleanlock.1.1.0-legacy.dmg)
+## System Requirements
 
-## 旧系统自行编译
+macOS Tahoe 26.0 or later
 
-如果你的 macOS 版本没那么早，只是不想要大玻璃，也可自行修改后编译：
+I really like Liquid Glass d(^_^o)
 
-> 1. 打开以下三个文件：
+## Download
+
+Download the latest release from the [Releases](https://github.com/bailitaotao/cleanlock/releases) page.
+
+There is also a prebuilt legacy package with minimum support down to macOS 12, but it will no longer receive updates and the experience is a bit worse:
+[Cleanlock.1.1.0-legacy.dmg](https://github.com/bailitaotao/cleanlock/releases/download/v1.1.0/Cleanlock.1.1.0-legacy.dmg)
+
+## Build For Older Systems
+
+If your macOS version is not that old and you just do not want the Liquid Glass style, you can still modify the project and build it yourself:
+
+> 1. Open these three files:
 > - `ContentView.swift`
 > - `CleaningOverlayView.swift`
 > - `AccessibilityPermissionView.swift`
-> 2. 将按钮样式改为旧系统可用的样式：
->    - 将结构体`Button`的 `.buttonStyle` 修饰符中的`glass`均改成`bordered`
-> 3. 在 Xcode 左侧 **Project Navigator** 中选中项目（cleanlock）
-> 4. 切换到 **General** 标签页，并将 **Minimum Deployments** 修改为你的系统版本
+> 2. Replace the button styles with ones available on older systems:
+>    - Change every `glass` button style used in `.buttonStyle(...)` to `bordered`
+> 3. In Xcode, select the project (`cleanlock`) in the left **Project Navigator**
+> 4. Open the **General** tab and change **Minimum Deployments** to your target macOS version
 
-## 开源协议
+## License
 
-本项目采用 MIT License 开源，详情见 [LICENSE](LICENSE)。
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.

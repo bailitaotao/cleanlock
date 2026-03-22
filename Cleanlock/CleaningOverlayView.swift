@@ -8,7 +8,9 @@ struct CleaningOverlayView: View {
             Color.black
                 .ignoresSafeArea()
             
-            Button("退出清洁", action: onExit)
+            Button(action: onExit) {
+                Text(.overlayExit)
+            }
                 .buttonBorderShape(.capsule)
                 .buttonStyle(.glassProminent)
                 .tint(.white.opacity(0.1))

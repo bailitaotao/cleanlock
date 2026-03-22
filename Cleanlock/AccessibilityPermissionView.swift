@@ -10,18 +10,20 @@ struct AccessibilityPermissionView: View {
                 .foregroundColor(.secondary)
 
             VStack(spacing: 8) {
-                Text("需要辅助功能权限")
+                Text(.permissionTitle)
                     .font(.title2)
                     .fontWeight(.semibold)
 
-                Text("设置以禁用 “⌘、⌃、fn、⏻” 等按键\n防止清洁过程中误触")
+                Text(.permissionSubtitle)
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .foregroundColor(.secondary)
             }
 
-            Button("请求权限") {
+            Button {
                 cleaningController.requestAccessibilityAccess()
+            } label: {
+                Text(.permissionRequest)
             }
             .controlSize(.large)
             .buttonStyle(.glass)
