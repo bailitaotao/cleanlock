@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		22B9F4CB2F66812B00755E94 /* cleanlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleanlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B9F4CB2F66812B00755E94 /* Cleanlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleanlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		22B9F4CD2F66812B00755E94 /* cleanlock */ = {
+		22B9F4CD2F66812B00755E94 /* Cleanlock */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = cleanlock;
+			path = Cleanlock;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		22B9F4C22F66812B00755E94 = {
 			isa = PBXGroup;
 			children = (
-				22B9F4CD2F66812B00755E94 /* cleanlock */,
+				22B9F4CD2F66812B00755E94 /* Cleanlock */,
 				22B9F4CC2F66812B00755E94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		22B9F4CC2F66812B00755E94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22B9F4CB2F66812B00755E94 /* cleanlock.app */,
+				22B9F4CB2F66812B00755E94 /* Cleanlock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22B9F4CA2F66812B00755E94 /* cleanlock */ = {
+		22B9F4CA2F66812B00755E94 /* Cleanlock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22B9F4D62F66812C00755E94 /* Build configuration list for PBXNativeTarget "cleanlock" */;
+			buildConfigurationList = 22B9F4D62F66812C00755E94 /* Build configuration list for PBXNativeTarget "Cleanlock" */;
 			buildPhases = (
 				22B9F4C72F66812B00755E94 /* Sources */,
 				22B9F4C82F66812B00755E94 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				22B9F4CD2F66812B00755E94 /* cleanlock */,
+				22B9F4CD2F66812B00755E94 /* Cleanlock */,
 			);
-			name = cleanlock;
+			name = Cleanlock;
 			packageProductDependencies = (
 			);
 			productName = cleanlock;
-			productReference = 22B9F4CB2F66812B00755E94 /* cleanlock.app */;
+			productReference = 22B9F4CB2F66812B00755E94 /* Cleanlock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "cleanlock" */;
+			buildConfigurationList = 22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "Cleanlock" */;
 			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -100,7 +100,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22B9F4CA2F66812B00755E94 /* cleanlock */,
+				22B9F4CA2F66812B00755E94 /* Cleanlock */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "cleanlock" */ = {
+		22B9F4C62F66812B00755E94 /* Build configuration list for PBXProject "Cleanlock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9F4D42F66812C00755E94 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22B9F4D62F66812C00755E94 /* Build configuration list for PBXNativeTarget "cleanlock" */ = {
+		22B9F4D62F66812C00755E94 /* Build configuration list for PBXNativeTarget "Cleanlock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9F4D72F66812C00755E94 /* Debug */,
