@@ -1,8 +1,14 @@
 # Cleanlock
 
-一个极简的 macOS 屏幕清洁小工具。
+<p align="center">
+  <img src="cleanlock.svg" alt="Cleanlock icon" width="64">
+</p>
 
-开启后，Cleanlock 会进入全屏黑幕，并临时拦截键盘输入，方便你擦拭 MacBook 屏幕和键盘。
+<p align="center">
+一个极简的 macOS 屏幕清洁小工具
+<p align="center">
+开启后，Cleanlock 会进入全屏黑幕，并临时拦截键盘输入，方便你擦拭 MacBook 屏幕和键盘
+</p>
 
 ## 系统要求
 
@@ -14,9 +20,11 @@ macOS Tahoe 26.0 及更高版本
 
 前往 [Releases](https://github.com/bailitaotao/cleanlock/releases) 页面下载最新版本
 
+也打包好了最低支持 macOS 12 的安装包，只是不会再做更新维护，体验也会差一些 [Cleanlock.1.1.0-legacy.dmg](https://github.com/bailitaotao/cleanlock/releases/download/v1.1.0/Cleanlock.1.1.0-legacy.dmg)
+
 ## 旧系统自行编译
 
-如果你使用的是 macOS Sequoia 或更早版本，想自行修改后编译，可以按下面方式处理：
+如果你的 macOS 版本没那么早，只是不想要大玻璃，也可自行修改后编译：
 
 > 1. 打开以下三个文件：
 > - `ContentView.swift`
