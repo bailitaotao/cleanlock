@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var cleaningController = ScreenCleaningController()
+    @ObservedObject var cleaningController: ScreenCleaningController
     
     var body: some View {
         VStack(spacing: 24) {
@@ -48,5 +48,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(cleaningController: ScreenCleaningController())
 }

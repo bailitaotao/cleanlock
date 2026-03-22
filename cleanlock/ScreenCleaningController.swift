@@ -11,6 +11,7 @@ import SwiftUI
 final class ScreenCleaningController: ObservableObject {
     /// 暴露给 SwiftUI 的状态，用来控制主界面按钮是否可点。
     @Published private(set) var isCleaning = false
+    @Published private(set) var hasAccessibilityAccess = false
 
     /// 承载黑屏界面的 AppKit 窗口。
     private var blackoutWindow: BlackoutWindow?
@@ -21,11 +22,15 @@ final class ScreenCleaningController: ObservableObject {
     /// 事件 tap 必须挂到 run loop 上才能开始工作。
     private var eventTapSource: CFRunLoopSource?
 
+    init() {
+        refreshAccessibilityAccessStatus()
+    }
+
     /// 开启清洁模式。
     /// 这里先过权限，再显示黑屏窗口，最后打开键盘拦截。
     func startCleaning() {
         guard !isCleaning else { return }
-        guard ensureAccessibilityAccess() else { return }
+        guard hasAccessibilityAccess else { return }
         guard let screen = NSScreen.main ?? NSScreen.screens.first else { return }
 
         let window = BlackoutWindow(screen: screen)
@@ -44,36 +49,13 @@ final class ScreenCleaningController: ObservableObject {
 
     /// 检查辅助功能权限。
     /// 没有这个权限时，普通用户态应用拿不到稳定的低层键盘事件。
-    private func ensureAccessibilityAccess() -> Bool {
-        if AXIsProcessTrusted() {
-            return true
-        }
-
-        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
-        let isTrusted = AXIsProcessTrustedWithOptions(options)
-
-        if !isTrusted {
-            presentAccessibilityAccessAlert()
-        }
-
-        return isTrusted
+    func refreshAccessibilityAccessStatus() {
+        hasAccessibilityAccess = AXIsProcessTrusted()
     }
 
-    /// 弹出权限说明，并提供跳转到系统设置的入口。
-    private func presentAccessibilityAccessAlert() {
-        let alert = NSAlert()
-        alert.alertStyle = .informational
-        alert.messageText = "需要辅助功能权限"
-        alert.informativeText = "设置后可以禁用 “⌘、⌃、fn、⏻” 等按键防止清洁过程中误触。 \n\n 请在“系统设置 > 隐私与安全性 > 辅助功能”中，添加 Cleanlock 并打开权限开关。"
-        alert.addButton(withTitle: "打开系统设置")
-        alert.addButton(withTitle: "稍后")
-
-        let response = alert.runModal()
-        guard response == .alertFirstButtonReturn else { return }
-
-        if let settingsURL = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility") {
-            NSWorkspace.shared.open(settingsURL)
-        }
+    func requestAccessibilityAccess() {
+        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
+        hasAccessibilityAccess = AXIsProcessTrustedWithOptions(options)
     }
 
     /// 安装低层事件 tap。

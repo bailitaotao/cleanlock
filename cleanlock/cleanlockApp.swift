@@ -20,7 +20,7 @@ struct cleanlockApp: App {
 
     var body: some Scene {
         Window("Cleanlock", id: "main") {
-            ContentView()
+            RootView()
         }
         .windowResizability(.contentSize)
     }
