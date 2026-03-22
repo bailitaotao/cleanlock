@@ -21,7 +21,7 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                Text("开启后屏幕将变黑并屏蔽键盘按键，\n方便你清洁屏幕与键盘。")
+                Text("开启后屏幕将变黑并屏蔽键盘按键\n方便你清洁屏幕与键盘")
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .foregroundColor(.secondary)

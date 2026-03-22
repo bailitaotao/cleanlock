@@ -6,7 +6,7 @@ struct AccessibilityPermissionView: View {
     var body: some View {
         VStack(spacing: 24) {
             Image(systemName: "hand.raised.circle")
-                .font(.system(size: 64))
+                .font(.system(size: 48))
                 .foregroundColor(.secondary)
 
             VStack(spacing: 8) {
@@ -14,7 +14,7 @@ struct AccessibilityPermissionView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
 
-                Text("设置以禁用 “⌘、⌃、fn、⏻” 等按键 \n\n 防止清洁过程中误触")
+                Text("设置以禁用 “⌘、⌃、fn、⏻” 等按键\n防止清洁过程中误触")
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .foregroundColor(.secondary)
