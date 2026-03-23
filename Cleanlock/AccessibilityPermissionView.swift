@@ -1,4 +1,6 @@
+import AppKit
 import SwiftUI
+import Combine
 
 struct AccessibilityPermissionView: View {
     @ObservedObject var cleaningController: ScreenCleaningController
@@ -32,6 +34,16 @@ struct AccessibilityPermissionView: View {
         .padding(40)
         .frame(minWidth: 400, minHeight: 300)
         .toolbar(removing: .title)
+        .onAppear {
+            cleaningController.refreshAccessibilityAccessStatus()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
+            cleaningController.refreshAccessibilityAccessStatus()
+        }
+        .onReceive(Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()) { _ in
+            guard !cleaningController.hasAccessibilityAccess else { return }
+            cleaningController.refreshAccessibilityAccessStatus()
+        }
     }
 }
 
