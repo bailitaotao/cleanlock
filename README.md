@@ -15,7 +15,7 @@ Cleanlock turns your screen black and temporarily blocks keyboard input so you c
 
 ## Interface
 
-![Interface](./assets/interface.png)
+![Interface](./assets/interface-en.png)
 
 ## System Requirements
 
